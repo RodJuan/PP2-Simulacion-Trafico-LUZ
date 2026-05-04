@@ -48,6 +48,7 @@ El éxito del proyecto radica en la capacidad de diagnosticar el estado del nodo
 ```text
 ├── data/                  # Archivos CSV/Excel con mediciones de campo.
 ├── simulations/           # Scripts de Python con el motor del simulador.
+```
 
 🛠️ Requisitos Tecnológicos
 
