@@ -28,18 +28,18 @@ Donde:
 Cada equipo de trabajo debe realizar mediciones de campo en el nodo asignado para obtener valores estadísticamente significativos de $T_1$ y $T_{sat}$.
 
 ### 2. Construcción del Simulador Numérico
-Desarrollar un script en **Python** (compatible con Google Colab) que modele el nodo. El script debe:
-*   Iterar sobre un rango de tiempos de verde (ej. de 10s a 90s).
-*   Calcular el flujo total $\Phi$ para cada intervalo.
-*   Generar una gráfica de **Eficiencia de Flujo ($\Phi$ vs $g$)**.
+Desarrollar un script en **Python** (compatible con Google Colab) que modele el nodo. El script debe iterar sobre un rango de tiempos de verde (ej. de 10s a 90s), calcular $\Phi$ y generar una gráfica de **Eficiencia de Flujo ($\Phi$ vs $g$)**.
 
 ### 3. Identificación del "Sweet Time"
 Analizar los resultados para encontrar el punto donde el incremento del tiempo de verde deja de producir un aumento proporcional en el flujo (punto de inflexión o saturación).
 
-### 4. Cuadro Comparativo Final
-Presentar un diagnóstico que compare:
-*   **Estado Actual:** Flujo medido con la configuración actual del semáforo.
-*   **Estado Optimizado:** Flujo máximo teórico y el tiempo de verde recomendado.
+---
+
+## 🧠 Interpretación de Resultados (Criterio de Ingeniería)
+El éxito del proyecto radica en la capacidad de diagnosticar el estado del nodo tras comparar la simulación con la realidad:
+
+*   **Si el flujo optimizado es mucho mayor al actual:** El semáforo está mal programado (Problema de Gestión).
+*   **Si el flujo optimizado es casi igual al actual:** El problema no es el tiempo del semáforo, sino que el nodo llegó a su capacidad física máxima (Problema de Infraestructura / Requiere otra solución de ingeniería).
 
 ---
 
@@ -50,21 +50,18 @@ Presentar un diagnóstico que compare:
 ├── simulations/           # Scripts de Python con el motor del simulador.
 └── workspace/             # Carpetas independientes por nodo/estudiante.
 
-
-
 🛠️ Requisitos Tecnológicos
 
     Lenguaje: Python 3.x
 
     Entorno: Google Colab
 
-    Librerías: Matplotlib (Visualización), NumPy (Cálculos), Pandas (Data).
+    Librerías: Matplotlib, NumPy, Pandas.
 
-    Modelado: Graphviz para representación de grafos de flujo.
 
-Facultad Experimental de Ciencias (FEC) - Universidad del Zulia (LUZ)
+Facultad Experimental de Ciencias - Universidad del Zulia (LUZ)
 
 Maracaibo, Venezuela.
 
-
 Copia esto y dale al **Preview** en GitHub. Verás que los separadores `---` ayudan mucho a que no se vea como una pared de texto. ¡Mucho éxito con la clase de PP2!
+
