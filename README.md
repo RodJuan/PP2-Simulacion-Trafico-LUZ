@@ -62,14 +62,9 @@ Presentar un diagnóstico que compare:
 
     Modelado: Graphviz para representación de grafos de flujo.
 
-Facultad de Ingeniería - Universidad del Zulia (LUZ)
+Facultad Experimental de Ciencias (FEC) - Universidad del Zulia (LUZ)
 
 Maracaibo, Venezuela.
 
 
-### Tips para que quede perfecto:
-1.  **Borra todo** lo que está en la línea 1 del editor de GitHub antes de pegar.
-2.  Dale al botón **"Preview"** (arriba a la izquierda en tu captura) antes de guardar para confirmar que se vea bien.
-3.  Si usas el celular para pegar, a veces el portapapeles elimina los saltos de línea; intenta "seleccionar todo" este bloque de código gris aquí arriba.
-
-¡Con eso el repo de PP2 quedará impecable para los muchachos!
+Copia esto y dale al **Preview** en GitHub. Verás que los separadores `---` ayudan mucho a que no se vea como una pared de texto. ¡Mucho éxito con la clase de PP2!
