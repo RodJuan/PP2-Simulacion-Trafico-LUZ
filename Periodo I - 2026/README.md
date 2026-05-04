@@ -61,6 +61,6 @@ El éxito del proyecto radica en la capacidad de diagnosticar el estado del nodo
 
 Facultad Experimental de Ciencias (FEC) - Universidad del Zulia (LUZ)
 
-Maracaibo, Venezuela.
+Periodo I del 2026, Maracaibo, Venezuela.
 
 
