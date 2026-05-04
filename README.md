@@ -8,7 +8,11 @@ El objetivo principal es realizar el diagnóstico, modelado y optimización de l
 
 🎯 Objetivo del Semestre: Optimización del "Sweet Time"
 
-En esta etapa inicial, el proyecto se centra en la Métrica Juez: Flujo Total por Ciclo ($\Phi$). Se busca determinar el Tiempo de Verde ($g$) óptimo para maximizar el número de vehículos que evacúan un nodo antes de llegar a la saturación o al desperdicio de tiempo operativo.🧮 Fundamentos del ModeloEl simulador debe basarse en la dinámica real de despacho de colas. La lógica fundamental para calcular el flujo esperado es:$$\Phi = 1 + \left\lfloor \frac{g - T_1}{T_{sat}} \right\rfloor$$Donde:$g$: Tiempo de luz verde (Variable de control).$T_1$: Tiempo de despacho del primer vehículo (Inercia del sistema/Reacción).$T_{sat}$: Tiempo promedio entre vehículos subsiguientes (Flujo saturado).
+En esta etapa inicial, el proyecto se centra en la Métrica Juez: Flujo Total por Ciclo ($\Phi$). Se busca determinar el Tiempo de Verde ($g$) óptimo para maximizar el número de vehículos que evacúan un nodo antes de llegar a la saturación o al desperdicio de tiempo operativo.
+
+🧮 Fundamentos del Modelo
+
+El simulador debe basarse en la dinámica real de despacho de colas. La lógica fundamental para calcular el flujo esperado es:$$\Phi = 1 + \left\lfloor \frac{g - T_1}{T_{sat}} \right\rfloor$$Donde:$g$: Tiempo de luz verde (Variable de control).$T_1$: Tiempo de despacho del primer vehículo (Inercia del sistema/Reacción).$T_{sat}$: Tiempo promedio entre vehículos subsiguientes (Flujo saturado).
 
 🚀 Hitos del Estudiante1.
 
