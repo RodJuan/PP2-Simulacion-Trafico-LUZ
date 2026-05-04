@@ -47,9 +47,7 @@ El éxito del proyecto radica en la capacidad de diagnosticar el estado del nodo
 ## 📂 Estructura del Repositorio
 ```text
 ├── data/                  # Archivos CSV/Excel con mediciones de campo.
-├── docs/                  # Diagramas de flujo y documentación técnica.
 ├── simulations/           # Scripts de Python con el motor del simulador.
-└── workspace/             # Carpetas independientes por nodo/estudiante.
 
 🛠️ Requisitos Tecnológicos
 
