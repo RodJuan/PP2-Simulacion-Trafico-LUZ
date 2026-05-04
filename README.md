@@ -59,9 +59,8 @@ El éxito del proyecto radica en la capacidad de diagnosticar el estado del nodo
     Librerías: Matplotlib, NumPy, Pandas.
 
 
-Facultad Experimental de Ciencias - Universidad del Zulia (LUZ)
+Facultad Experimental de Ciencias (FEC) - Universidad del Zulia (LUZ)
 
 Maracaibo, Venezuela.
 
-Copia esto y dale al **Preview** en GitHub. Verás que los separadores `---` ayudan mucho a que no se vea como una pared de texto. ¡Mucho éxito con la clase de PP2!
 
