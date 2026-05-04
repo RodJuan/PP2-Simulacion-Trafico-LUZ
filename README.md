@@ -49,3 +49,27 @@ Presentar un diagnóstico que compare:
 ├── docs/                  # Diagramas de flujo y documentación técnica.
 ├── simulations/           # Scripts de Python con el motor del simulador.
 └── workspace/             # Carpetas independientes por nodo/estudiante.
+
+
+
+🛠️ Requisitos Tecnológicos
+
+    Lenguaje: Python 3.x
+
+    Entorno: Google Colab
+
+    Librerías: Matplotlib (Visualización), NumPy (Cálculos), Pandas (Data).
+
+    Modelado: Graphviz para representación de grafos de flujo.
+
+Facultad de Ingeniería - Universidad del Zulia (LUZ)
+
+Maracaibo, Venezuela.
+
+
+### Tips para que quede perfecto:
+1.  **Borra todo** lo que está en la línea 1 del editor de GitHub antes de pegar.
+2.  Dale al botón **"Preview"** (arriba a la izquierda en tu captura) antes de guardar para confirmar que se vea bien.
+3.  Si usas el celular para pegar, a veces el portapapeles elimina los saltos de línea; intenta "seleccionar todo" este bloque de código gris aquí arriba.
+
+¡Con eso el repo de PP2 quedará impecable para los muchachos!
