@@ -1,66 +1,63 @@
+# 🚦 Simulador de Flujo de Recursos: Nodos Críticos de Maracaibo
 
-# Simulador de Flujo de Recursos: Nodos Críticos de Maracaibo
-
-Este repositorio contiene el desarrollo de un **Simulador de Flujo Vehicular** basado en modelos estocásticos y sistemas de eventos discretos. El proyecto forma parte de la cátedra de **Simulación de Sistemas (PP2)** de la **Universidad del Zulia (LUZ)**.
+Este repositorio contiene el desarrollo de un **Simulador de Flujo Vehicular** para la cátedra de **Simulación de Sistemas (PP2)** de la **Facultad Experimental de Ciencias (FEC)** en la Universidad del Zulia (LUZ).
 
 ---
 
 ## 📋 Descripción del Proyecto
-El objetivo principal es realizar el diagnóstico, modelado y optimización de la infraestructura vial urbana de Maracaibo. El enfoque es **Top-Down**: empezamos con la recolección de datos reales para construir un simulador numérico que permita identificar la configuración de semáforos que maximiza la eficiencia del flujo en nodos críticos.
+El proyecto consiste en un **Análisis de Reingeniería de Fases**. Buscamos determinar si un cambio en la lógica de activación de semáforos puede optimizar el flujo total ($\Phi$) sin alterar la infraestructura física (aceras/canales) del nodo Cuartel Libertador - FEC.
 
-## 🎯 Objetivo del Semestre: Optimización del "Sweet Time"
-En esta etapa inicial, el proyecto se centra en la **Métrica Juez: Flujo Total por Ciclo ($\Phi$)**. Se busca determinar el Tiempo de Verde ($g$) óptimo para maximizar el número de vehículos que evacúan un nodo antes de llegar a la saturación o al desperdicio de tiempo operativo.
+## 🎯 Objetivo: Comparativa de Escenarios de Flujo
+El equipo debe modelar y comparar dos topologías de control para un ciclo de tiempo constante:
 
-## 🧮 Fundamentos del Modelo
-El simulador debe basarse en la dinámica real de despacho de colas. La lógica fundamental para calcular el flujo esperado es:
+### Escenario A: Secuencial (Estado Actual)
+Activación sucesiva de cada semáforo: 
+**Fase 1** → **Fase 2** → **Fase 3** → **Fase 4** → (Reinicio)
+* **Limitante:** Solo un flujo principal se mueve a la vez.
 
-$$\Phi = 1 + \left\lfloor \frac{g - T_1}{T_{sat}} \right\rfloor$$
-
-Donde:
-*   **$g$**: Tiempo de luz verde (Variable de control).
-*   **$T_1$**: Tiempo de despacho del primer vehículo (Inercia del sistema/Reacción).
-*   **$T_{sat}$**: Tiempo promedio entre vehículos subsiguientes (Flujo saturado).
-
----
-
-## 🚀 Hitos del Estudiante
-
-### 1. Recolección de Datos (Diagnóstico del Paciente)
-Cada equipo de trabajo debe realizar mediciones de campo en el nodo asignado para obtener valores estadísticamente significativos de $T_1$ y $T_{sat}$.
-
-### 2. Construcción del Simulador Numérico
-Desarrollar un script en **Python** (compatible con Google Colab) que modele el nodo. El script debe iterar sobre un rango de tiempos de verde (ej. de 10s a 90s), calcular $\Phi$ y generar una gráfica de **Eficiencia de Flujo ($\Phi$ vs $g$)**.
-
-### 3. Identificación del "Sweet Time"
-Analizar los resultados para encontrar el punto donde el incremento del tiempo de verde deja de producir un aumento proporcional en el flujo (punto de inflexión o saturación).
+### Escenario B: Simultáneo Opuesto (Propuesta)
+Activación de flujos paralelos no colisionantes:
+1.  **Fase Alfa (1+3):** Canales lineales 1.1, 1.2 y 3.1, 3.2 activos simultáneamente.
+2.  **Fase Beta (2+4):** Canales lineales 2.1, 2.2 y 4.1, 4.2 activos simultáneamente.
+* **Hipótesis:** La eliminación de los giros a la izquierda (canales x.3) en favor de flujos directos masivos maximiza el $\Phi$ total por ciclo.
 
 ---
 
-## 🧠 Interpretación de Resultados (Criterio de Ingeniería)
-El éxito del proyecto radica en la capacidad de diagnosticar el estado del nodo tras comparar la simulación con la realidad:
+## 📊 Fase 1: Levantamiento de Datos (Tarea de Campo)
+Antes de programar el simulador, cada equipo debe generar el **Dataset Maestro** de su intersección asignada.
 
-*   **Si el flujo optimizado es mucho mayor al actual:** El semáforo está mal programado (Problema de Gestión).
-*   **Si el flujo optimizado es casi igual al actual:** El problema no es el tiempo del semáforo, sino que el nodo llegó a su capacidad física máxima (Problema de Infraestructura / Requiere otra solución de ingeniería).
+### 1. Digitalización del Nodo (Diagrama Técnico)
+Cada equipo debe entregar un diagrama detallado de su intersección (usando Paint, herramientas móviles o CAD). Debe incluir:
+* Numeración de semáforos (Fases).
+* Identificación de canales de cada avenida (Ej: 1.1, 1.2, 1.3).
+* Sentido de las flechas de flujo.
+
+### 2. Protocolo de Medición de Flujo
+Registrar promedios de al menos 5 ciclos completos en horas pico:
+* **Tiempos Base:** $g$ (verde actual) y $C$ (tiempo total del ciclo).
+* **$T_1$:** Tiempo de reacción del primer vehículo al iniciar el verde.
+* **$T_{sat}$:** Tiempo promedio entre vehículos en flujo saturado.
+* **$\Phi$ (Flujo):** Total de autos que logran cruzar por ciclo.
+
+### 3. Matriz de Intención de Giro (%)
+Registrar el promedio de intención de maniobra por carril:
+* **% Sigue Recto.**
+* **% Giro a la Izquierda** (Flujo de conflicto).
+* **% Giro a la Derecha** (Flujo de incorporación).
 
 ---
 
-## 📂 Estructura del Repositorio
-```text
-├── data/                  # Archivos CSV/Excel con mediciones de campo.
-├── simulations/           # Scripts de Python con el motor del simulador.
-```
+## 🚀 Entregables (Semana 1)
+Subir a la carpeta correspondiente en `workspace/`:
+1.  `diagrama_nodo.png`: Mapa técnico del nodo.
+2.  `datos_campo.csv`: Tabla con promedios de $T_1$, $T_{sat}$, $\Phi$ y porcentajes de giro.
+3.  `observaciones.md`: Notas sobre obstáculos externos (baches, paradas, etc.).
 
-🛠️ Requisitos Tecnológicos
+---
 
-    Lenguaje: Python 3.x
+## 🧠 Interpretación de Ingeniería
+* **Si $\Phi_{B} >> \Phi_{A}$:** Se recomienda prohibir el giro a la izquierda en ese nodo para optimizar la Av. Universidad.
+* **Si $\Phi_{B} \approx \Phi_{A}$:** La congestión es estructural; el cambio de fases no justifica la eliminación de cruces.
 
-    Entorno: Google Colab
-
-    Librerías: Matplotlib, NumPy, Pandas.
-
-
-Facultad Experimental de Ciencias (FEC) - Universidad del Zulia (LUZ)
-
-Periodo I del 2026, Maracaibo, Venezuela.
-
-
+---
+**Facultad Experimental de Ciencias (FEC) - Universidad del Zulia (LUZ)** *Maracaibo, Venezuela.*
