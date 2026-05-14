@@ -48,7 +48,7 @@ Cada equipo debe generar el archivo **`datos_campo.csv`** con las siguientes med
 ## 🚀 Entregables y Desarrollo
 Subir a la carpeta `workspace/`:
 *   `diagrama_nodo.png`: Mapa técnico numerado.
-*   `datos_campo.csv`: Dataset con las mediciones detalladas.
+*   `datos_campo.csv`: Dataset con las mediciones detalladas. Incluir hora y fecha de inicio de medicion.
 *   `observaciones.md`: Notas sobre el estado de la vía.
 
 ### 🤖 Uso de Inteligencia Artificial:
