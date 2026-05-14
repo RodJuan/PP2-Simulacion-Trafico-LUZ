@@ -31,7 +31,7 @@ Si en el canal 1.1 tenemos un verde de **$g = 30s$**, una inercia de **$T_1 = 4.
 2.  Dividimos entre la saturación: $26 / 2.2 = 11.81$.
 3.  Aplicamos la función piso ($\lfloor \rfloor$): $11$ vehículos.
 4.  Sumamos el primer vehículo: $11 + 1 = 12$ vehículos.
-**Resultado:** $\Phi = 12$ vehículos por ciclo.
+**Resultado:** $\Phi = 12$ vehículos por fase.
 
 ---
 
@@ -76,7 +76,7 @@ Sigan esta secuencia por cada carril:
 > **⚠️ IMPORTANTE:** Solo midan el $T_{sat}$ de los vehículos que forman parte de la **cola acumulada** durante el rojo. Si un vehículo llega a la intersección sin detenerse porque el semáforo ya estaba en verde, ese tiempo **no es válido** para el cálculo de saturación, ya que no representa la presión de salida del nodo.
 
 #### 📝 Ejemplo de Registro de Datos
-Si en un ciclo miden:
+Si en una fase miden:
 
 * **Verde inicia:** 0.0s
 * **Carro 1 cruza:** 3.8s → ($T_1 = 3.8s$)
@@ -84,7 +84,7 @@ Si en un ciclo miden:
 * **Carro 3 cruza:** 8.1s (Intervalo: 2.2s)
 * **Carro 4 cruza:** 10.1s (Intervalo: 2.0s)
 
-**$T_{sat}$ de este ciclo:** $(2.1 + 2.2 + 2.0) / 3 = \mathbf{2.1s}$
+**$T_{sat}$ de esta fase:** $(2.1 + 2.2 + 2.0) / 3 = \mathbf{2.1s}$
 
 ## 🧠 Interpretación de Ingeniería
 *   **Si $\Phi_{B} >> \Phi_{A}$:** Se justifica proponer la eliminación de giros a la izquierda.
