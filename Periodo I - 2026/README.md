@@ -21,7 +21,7 @@ $$\Phi = 1 + \left\lfloor \frac{g - T_1}{T_{sat}} \right\rfloor$$
 
 ### 🔍 Glosario de Términos:
 *   **$\Phi$ (Flujo):** Número total de vehículos que logran cruzar la línea de pare en un tiempo de verde.
-*   **$g$ (Verde):** Tiempo total de luz verde asignado al canal (Variable de control).
+*   **$g$ (Verde):** Tiempo total de luz verde + amarilla asignado al canal (Variable de control).
 *   **$T_1$ (Inercia):** Tiempo que tarda el primer vehículo en arrancar y cruzar (Reacción).
 *   **$T_{sat}$ (Saturación):** Tiempo promedio entre los vehículos que vienen detrás del primero.
 
