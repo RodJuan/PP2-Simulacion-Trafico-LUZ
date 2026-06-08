@@ -1,10 +1,5 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Jun  8 05:40:09 2026
 
-@author: USUARIO
-"""
-
+# Programa para generar el .csv listo para ser llenado con data real en campo. La data que contiene no es real, solo de muestra y deberia ser reemplazada por la real.
 import csv
 
 # Definición de las columnas del Dataset Maestro
