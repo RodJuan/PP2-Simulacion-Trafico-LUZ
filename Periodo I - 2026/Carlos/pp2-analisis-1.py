@@ -22,7 +22,6 @@ pio.renderers.default = "browser"
 #DATOS DEL MODELO
 #-----------------------------------------------------------------------------------------------
 CSV_FILE='datos-campo-carlos.csv' #Modificar según el caso
-COL_G='g (s)'
 COL_T1='t1 (s)'
 COL_TSAT='tsat (s)'
 #===============================================================================================
@@ -34,16 +33,16 @@ COL_TSAT='tsat (s)'
 #-----------------------------------------------------------------------------------------------
 print(f"Carga de datos desde {CSV_FILE}...")
 df=pd.read_csv(CSV_FILE)
-g=df[COL_G]
 t1=df[COL_T1]
 tsat=df[COL_TSAT]
+g_const=65
 #===============================================================================================
 
 
 #===============================================================================================
 #Cálculo de PHI con la ecuación de la cola de descarga
 #-----------------------------------------------------------------------------------------------
-phi=1+np.floor((g-t1)/tsat)
+phi=1+np.floor((g_const-t1)/tsat)
 phi=np.maximum(phi,0)
 #===============================================================================================
 
@@ -70,7 +69,6 @@ tsat_delta=tsat_range[1]-tsat_range[0]
 t1_mesh,tsat_mesh=np.meshgrid(t1_range,tsat_range)
 
 #Cálculo de Phi con la función piso (floor)
-g_const=65
 phi_mesh=1+np.floor((g_const-t1_mesh)/tsat_mesh)
 phi_mesh=np.maximum(phi_mesh,0)
 
@@ -89,6 +87,13 @@ phi_mesh_smooth=1+(np.abs(g_const-t1_mesh_smooth)/tsat_mesh_smooth)
 phi_mesh_smooth=np.maximum(phi_mesh_smooth,0)
 #===============================================================================================
 
+#===============================================================================================
+#Generación de datos para gráfica de pendiente de Phi respecto de Tsat
+#-----------------------------------------------------------------------------------------------
+
+dphi_dtsat=-((g_const-t1_mesh_smooth)/(tsat_mesh_smooth*tsat_mesh_smooth))
+
+#===============================================================================================
 
 #===============================================================================================
 #Visualización de los datos recopilados del modelo
@@ -160,7 +165,21 @@ figure_2.update_layout(
 figure_2.show()
 #===============================================================================================
 
+#===============================================================================================
+#Visualización del cambio de Phi respecto de Tsat
+#-----------------------------------------------------------------------------------------------
 
+figure_3=plt.figure(dpi=300)
+axis_3=figure_3.add_subplot(111)
+
+for j, x_val in enumerate(t1_range_smooth):
+    plt.plot(tsat_range_smooth,dphi_dtsat[:,j],label=f'T1 = {x_val}',linewidth=0.75)
+
+axis_3.set_title('Derivada de Phi respecto de Tsat',fontweight='bold')
+axis_3.set_xlabel('Tsat [s]')
+axis_3.set_ylabel('Phi ')
+plt.grid(True,alpha=0.3)
+#===============================================================================================
 
 #===============================================================================================
 #Mensajes para el usuario
@@ -169,7 +188,7 @@ print("\n--- Inferencia de comportamiento de Tráfico ---")
 print(f"Total ciclos analzados: {len(df)}")
 print(f"Vehículos descargados promedio por ciclo: {df['phi'].mean():.2f}")
 print(f"Máximo capacidad de descarga observada: {int(df['phi'].max())} vehículos")
-print(f"Mínimo tiempo de verde efectivo: {df[COL_G].min():.2f} segundos")
+print(f"Mínimo tiempo de verde efectivo: {g_const:.2f} segundos")
 #===============================================================================================
 
 
