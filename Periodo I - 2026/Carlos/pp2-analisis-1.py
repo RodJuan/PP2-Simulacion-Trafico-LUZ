@@ -177,7 +177,7 @@ for j, x_val in enumerate(t1_range_smooth):
 
 axis_3.set_title('Derivada de Phi respecto de Tsat',fontweight='bold')
 axis_3.set_xlabel('Tsat [s]')
-axis_3.set_ylabel('Phi ')
+axis_3.set_ylabel('DPhi ')
 plt.grid(True,alpha=0.3)
 #===============================================================================================
 
