@@ -120,16 +120,16 @@ La ecuación (1) representa un modelo simple pero efectivo de establecer el trá
 
 **Figure 1:** Gráfica de los datos experimentales del modelo de simulación del tráfico urbano. En la figura 1b se muestra un plano que al intersectar la superficie muestra el máximo valor de \(\Phi\) para un valor de \(T_1\) dado.
 
-| (a) Representación de la función \(\Phi\) para los datos experimentales tomados cuando se emplea la función \(\lfloor \text{ }\rfloor\) (piso). | (b) Representación de la función \(\Phi\) para los datos experimentales tomados cuando no se emplea la función \(\lfloor \text{ } \rfloor\) (piso). |
+| (a) Representación de la función $$\Phi$$ para los datos experimentales tomados cuando se emplea la función $$\lfloor \text{ }\rfloor$$ (piso). | (b) Representación de la función $$\Phi$$ para los datos experimentales tomados cuando no se emplea la función $$\lfloor \text{ } \rfloor$$ (piso). |
 |:---:|:---:|
-| ![Figura 1a](Figure%202026-06-14%20184344) | ![Figura 1b](Figure%202026-06-14%20184345) |
+| ![Figura 1a](Figure 2026-06-14 184344) | ![Figura 1b](Figure 2026-06-14 184345) |
 | *Figura 1a* | *Figura 1b* |
 
-**Figure 2:** Gráfica de la derivada de \(\Phi\) respecto de \(T_{sat}\). Note que la función derivada se aproxima asintóticamente a cero, lo que indica que la función que describe a \(\Phi\) no tiene punto crítico y por tanto no tiene un máximo definido.
+**Figure 2:** Gráfica de la derivada de $$\Phi$$ respecto de $$T_{sat}$$. Note que la función derivada se aproxima asintóticamente a cero, lo que indica que la función que describe a $$\Phi$$ no tiene punto crítico y por tanto no tiene un máximo definido.
 
-![Figura 2](Figure%202026-06-15%20203629)
+![Figura 2](Figure 2026-06-15 203629)
 
-*Figura 2: Gráfica de la derivada de \(\Phi\) respecto de \(T_{sat}\).*
+*Figura 2: Gráfica de la derivada de $$\Phi$$ respecto de $$T_{sat}$$.*
 
 ---
 
