@@ -23,7 +23,7 @@ $$ \Phi = 1 + \left\lfloor \frac{g - T_1}{T_{sat}} \right\rfloor \qquad (1) $$
 - **\(T_1\) (Inercia):** Tiempo que tarda el primer vehículo en arrancar y cruzar la linea de pare (Reacción).
 - **\(T_{sat}\) (Saturación):** Tiempo promedio entre los vehículos que vienen detrás del primero.
 
-Con las siguientes indicaciones. Si en el canal 1.1 tenemos un verde de \(g = 30s\), una inercia de \(T_1 = 4.0s\) y un tiempo entre vehículos de \(T_{sat} = 2.2s\):
+Con las siguientes indicaciones. Si en el canal 1.1 tenemos un verde de \(g = 30s\), una inercia de $$T_1 = 4.0s$$ y un tiempo entre vehículos de $$T_{sat} = 2.2s$$:
 
 1. Restamos la inercia del verde: \(30 - 4 = 26s\) (Tiempo disponible para el resto de la cola).
 2. Dividimos entre la saturación: \(26 / 2.2 = 11.81\).
