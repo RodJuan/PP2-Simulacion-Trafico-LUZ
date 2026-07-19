@@ -14,7 +14,7 @@ El transito urbano es representado mediante un modelo discreto de descarga de co
 
 El modelo asignado por el profesor es descrito mediante la ecuación
 
-$$ \Phi = 1 + \left\lfloor \frac{g - T_1}{T_{sat}} \right\rfloor \tag{1} \label{eq:eq-1-1} $$
+$$ \Phi = 1 + \left\lfloor \frac{g - T_1}{T_{sat}} \right\rfloor \qquad (1) $$
 
 **Glosario de Términos:**
 
@@ -122,12 +122,12 @@ La ecuación (1) representa un modelo simple pero efectivo de establecer el trá
 
 | (a) Representación de la función \(\Phi\) para los datos experimentales tomados cuando se emplea la función \(\lfloor \text{ }\rfloor\) (piso). | (b) Representación de la función \(\Phi\) para los datos experimentales tomados cuando no se emplea la función \(\lfloor \text{ } \rfloor\) (piso). |
 |:---:|:---:|
-| ![Figura 1a](/Figure%202026-06-14%20184344) | ![Figura 1b](/Figure%202026-06-14%20184345) |
+| ![Figura 1a](Figure%202026-06-14%20184344) | ![Figura 1b](Figure%202026-06-14%20184345) |
 | *Figura 1a* | *Figura 1b* |
 
 **Figure 2:** Gráfica de la derivada de \(\Phi\) respecto de \(T_{sat}\). Note que la función derivada se aproxima asintóticamente a cero, lo que indica que la función que describe a \(\Phi\) no tiene punto crítico y por tanto no tiene un máximo definido.
 
-![Figura 2](/Figure%202026-06-15%20203629)
+![Figura 2](Figure%202026-06-15%20203629)
 
 *Figura 2: Gráfica de la derivada de \(\Phi\) respecto de \(T_{sat}\).*
 
