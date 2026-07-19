@@ -14,7 +14,7 @@ El transito urbano es representado mediante un modelo discreto de descarga de co
 
 El modelo asignado por el profesor es descrito mediante la ecuación
 
-$$ \Phi = 1 + \left\lfloor \frac{g - T_1}{T_{sat}} \right\rfloor \qquad (1) $$
+$$ \Phi = 1 + \left\lfloor \frac{g - T_1}{T_{sat}} \right\rfloor \qquad (1)} $$
 
 **Glosario de Términos:**
 
@@ -76,7 +76,7 @@ $$ \lfloor x \rfloor \equiv \lim_{n \to \infty}{\left(x-\frac{1}{2}+\frac{1}{\pi
 
 Que como el lector puede notar el argumento \(\cot{(\pi x)}\) tiene discontinuidades en multiplos enteros de \(\pi\). Así pues el modelo original dado presenta discontinuidades discretas en su dominio. No obstante esta característica limitante, la función original puede estudiarse si se considera que la ecuación
 
-$$ \Phi = 1 + \frac{g - T_1}{T_{sat}} \quad T_1<g \tag{2} \qquad (2) $$
+$$ \Phi = 1 + \frac{g - T_1}{T_{sat}} \quad T_1<g \qquad (2)} $$
 
 Describe una envolvente de los valores de la función original. Esto puede hacerse ya que la función piso es una función creciente y el numerador de la fracción que aparece es siempre positivo. Si por alguna razón se viola la condición \(T_1<g\) el modelo matemático no tiene sentido o simplemente no representa la realidad adecuadamente. Con lo anterior en mente se puede hacer la conclusión de que \(\Phi\) y \(T_{sat}\) son inversamente proporcionales y por tanto \(\Phi\) simplemente será mayor para un menor valor de \(T_{sat}\) independientemente de \(T_1\), lo cual ocurre a razón de
 
@@ -84,7 +84,7 @@ $$ \frac{d\Phi}{dT_{sat}} = -\frac{g-T_1}{T_{sat}^2} \quad T_1<g \qquad (3) $$
 
 Es decir \(\Phi\) disminuye cuadráticamente con el aumento de \(T_{sat}\) y por tanto \(T_{sat}\) es la variable que más influencia tiene sobre \(\Phi\). Vea la figura 1b y observe que el plano que corta la superficie de \(\Phi\) tiene una curva hiperbólica en su intersección con la superficie \(\Phi(T_1,T_{sat})\) cuya pendiente respecto de \(T_{sat}\) es dada por la ecuación (3). Note además que la derivada de \(\Phi\) respecto de \(T_1\) es simplemente una constante, que curiosamente también depende de \(T_{sat}\) en forma inversamente proporcional
 
-$$ \frac{d\Phi}{dT_1} = -\frac{1}{T_{sat}} \tag{4} \qquad (4) $$
+$$ \frac{d\Phi}{dT_1} = -\frac{1}{T_{sat}} \qquad (4) $$
 
 Por tanto diminuir el tiempo de saturación \(T_{sat}\) impacta directa y significativamente a \(\Phi\) independientemente de los demás parámetros. Además considere que \(g\) es una constante, mientras que \(T_1\) aunque variable, oscila alrededor de una media ya que los vehículos que circulan, son en su mayoría similares. Con esto en mente, cabe preguntarse ¿en qué factor debe disminuirse \(T_{sat}\) para que el flujo de vehículos \(\Phi\) se multiplique por un factor \(n\)? Para responder esta pregunta observe que si \(T_{sat}\) se disminuye hasta un valor \(\frac{T_{sat}}{m}\) con \(m>1\) entonces
 
@@ -120,16 +120,15 @@ La ecuación (1) representa un modelo simple pero efectivo de establecer el trá
 
 **Figure 1:** Gráfica de los datos experimentales del modelo de simulación del tráfico urbano. En la figura 1b se muestra un plano que al intersectar la superficie muestra el máximo valor de \(\Phi\) para un valor de \(T_1\) dado.
 
-| (a) Representación de la función $$\Phi$$ para los datos experimentales tomados cuando se emplea la función $$\lfloor \text{ }\rfloor$$ (piso). | (b) Representación de la función $$\Phi$$ para los datos experimentales tomados cuando no se emplea la función $$\lfloor \text{ } \rfloor$$ (piso). |
+| (a) Representación de la función \(\Phi\) para los datos experimentales tomados cuando se emplea la función \(\lfloor \text{ }\rfloor\) (piso). | (b) Representación de la función \(\Phi\) para los datos experimentales tomados cuando no se emplea la función \(\lfloor \text{ } \rfloor\) (piso). |
 |:---:|:---:|
-| ![Figura 1a](Figure 2026-06-14 184344) | ![Figura 1b](Figure 2026-06-14 184345) |
+| ![Figura 1a](Figure 2026-06-14 184344.png) | ![Figura 1b](Figure 2026-06-14 184345.png) |
 | *Figura 1a* | *Figura 1b* |
 
-**Figure 2:** Gráfica de la derivada de $$\Phi$$ respecto de $$T_{sat}$$. Note que la función derivada se aproxima asintóticamente a cero, lo que indica que la función que describe a $$\Phi$$ no tiene punto crítico y por tanto no tiene un máximo definido.
+**Figure 2:** Gráfica de la derivada de \(\Phi\) respecto de \(T_{sat}\). Note que la función derivada se aproxima asintóticamente a cero, lo que indica que la función que describe a \(\Phi\) no tiene punto crítico y por tanto no tiene un máximo definido.
 
-![Figura 2](Figure 2026-06-15 203629)
+![Figura 2](Figure 2026-06-15 203629.png)
 
-*Figura 2: Gráfica de la derivada de $$\Phi$$ respecto de $$T_{sat}$$.*
+*Figura 2: Gráfica de la derivada de \(\Phi\) respecto de \(T_{sat}\).*
 
 ---
-
