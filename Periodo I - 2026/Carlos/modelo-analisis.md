@@ -14,7 +14,7 @@ El transito urbano es representado mediante un modelo discreto de descarga de co
 
 El modelo asignado por el profesor es descrito mediante la ecuación
 
-$$ \Phi = 1 + \left\lfloor \frac{g - T_1}{T_{sat}} \right\rfloor \qquad (1)} $$
+$$ \Phi = 1 + \left\lfloor \frac{g - T_1}{T_{sat}} \right\rfloor \qquad (1) $$
 
 **Glosario de Términos:**
 
