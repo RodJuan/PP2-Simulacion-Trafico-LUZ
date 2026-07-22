@@ -135,13 +135,13 @@ La ecuación (1) representa un modelo simple pero efectivo de establecer el trá
 
 ## Figuras
 
-![Figura 1a](Figure 2026-06-14 184344.png)
+![Figura 1a](Figure-2026-06-14-184344.png)
 *Figura 1a: Representación de la función $$\Phi$$ para los datos experimentales tomados cuando se emplea la función $$\lfloor \text{ }\rfloor$$ (piso).*
 
-![Figura 1b](Figure 2026-06-14 184345.png)
+![Figura 1b](Figure-2026-06-14-184345.png)
 *Figura 1b: Representación de la función $$\Phi$$ para los datos experimentales tomados cuando no se emplea la función $$\lfloor \text{ } \rfloor$$ (piso).*
 
-![Figura 2](Figure 2026-06-15 203629.png)
+![Figura 2](Figure-2026-06-15-203629.png)
 *Figura 2: Gráfica de la derivada de $$\Phi$$ respecto de $$T_{sat}$$.*
 
 ![Figura 3](nodo-cuartel-libertador.jpeg)
