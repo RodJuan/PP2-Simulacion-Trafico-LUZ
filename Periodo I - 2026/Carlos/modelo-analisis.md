@@ -88,7 +88,7 @@ $$ \frac{d\Phi}{dT_1} = -\frac{1}{T_{sat}} \qquad (4) $$
 
 Por tanto diminuir el tiempo de saturación $$T_{sat}$$ impacta directa y significativamente a $$\Phi$$ independientemente de los demás parámetros. Además considere que $$g$$ es una constante, mientras que $$T_1$$ aunque variable, oscila alrededor de una media ya que los vehículos que circulan, son en su mayoría similares. Con esto en mente, cabe preguntarse ¿en qué factor debe disminuirse $$T_{sat}$$ para que el flujo de vehículos $$\Phi$$ se multiplique por un factor $$n$$? Para responder esta pregunta observe que si $$T_{sat}$$ se disminuye hasta un valor $$\frac{T_{sat}}{m}$$ con $$m>1$$ entonces
 
-$$ \Phi = 1 + \frac{g - T_1}{\frac{T_{sat}}{m}} \quad T_1<g $$
+$$ \Phi = 1 + \frac{g - T_1}{\frac{T_{sat}}{m}} \quad T_1\<g $$
 
 $$ \Phi = 1 + m\left(\frac{g - T_1}{T_{sat}}\right) \quad m>1 $$
 
@@ -108,6 +108,23 @@ $$ n(m) = \frac{T_{sat} + m(g - T_1)}{T_{sat} + g - T_1} \quad T_1<g \quad m>1 \
 
 La ecuación (5) indica que si se disminuye $$T_{sat}$$ por un factor de $$\frac{1}{m}$$ se obtiene un incremento en $$\Phi$$ de $$n(m)$$ y por tanto se mejora la circulación de vehículos por un factor de $$n(m)$$ si se mantiene el resto de variables.
 
+
+## Aplicación al Problema Planteado
+
+Para iniciar este apartado considerar la Figura 3 que se muestra más abajo. En ella se muestra esquemáticamente la intersección entre avenidas del Edificio Grano de Oro y el Cuartel Libertador. Las indicaciones de esta actividad plantean dos escenarios A y B, bajo el modelo planteado por la ecuación 1. En dicha ecuación los términos $$T_1$$ y $$T_{sat}$$ pueden tener experimentalmente en la práctica cualquier valor finito mayor que cero (no existe la velocidad infinita y entonces $$T_1$$ y $$T_{sat}$$ no pueden ser cero), por las debilidades del modelo planteadas anteriormente. Por tanto A y B son indecidibles a priori bajo este modelo matemático pues se puede obtener cualquier combinación de $$T_1$$ y $$T_{sat}$$ que hagan que los escenarios A y B sean iguales, A mejor que B y también B mejor que A. 
+
+Apartando la consideración anterior, las imágenes de satélite (ver Figura 4) muestran que la circulación de la avenida Libertador con la avenida 22 debe mantenerse tal como está, puesto que una modificación de la alternancia en el patrón de cambio de luces del semáforo conduciría a una catástrofe por la disposición de las vías que no permite una circulación simultánea de más de una vía. Solo se permite la circulación de las vías paralelas.
+
+Si se omite la consideración anterior y se hace la suposición de que efectivamente es posible que dicha modificación del patrón de cambio del semáforo es posible, aún así se tendría una imposibilidad matemática de hallar una solución óptima de entre A y B. Esto se debe a que A se expresa como el flujo promedio de la secuencia 1,2,3,4 es decir
+
+$$ \Phi_A = \frac{\Phi_1+\Phi_2+\Phi_3+\Phi_4}{4} $$
+
+Mientras que B es el máximo de entre las secuencias 1,3 y 2,4 
+
+$$ \Phi_B = max(\frac{\Phi_1+\Phi_3}{2},\frac{\Phi_2+\Phi_4}{2}) $$
+
+Pero como $$T_1$$ y $$T_{sat}$$ pueden tener cualquier valor para cada canal 1,2,3,4 entonces realmente $$\Phi_A$$ y $$\Phi_B$$ pueden tener cualquier valor finito positivo mayor que cero, y en consecuencia en base a este modelo matemático no hay forma de determinar matemáticamente si A es mejor que B o viceversa. Sin embargo, si es posible obtener una medida estadística que permita establecer si A es mejor que B o a la inversa, pero ello requiere un gran número de mediciones para establecer valores de tendencia central y de dispersión. Los resultados de realizar las mencionadas medidas estadísticas solo tienen validez localmente, y están sujetas a variaciones si se consideran intervalos de medición amplios en el tiempo (por ejemplo mediciones hechas en diciembre o en agosto, o considerando un año de mediciones o solo unos meses).
+
 ---
 
 ## Concluciones
@@ -118,17 +135,19 @@ La ecuación (1) representa un modelo simple pero efectivo de establecer el trá
 
 ## Figuras
 
-**Figure 1:** Gráfica de los datos experimentales del modelo de simulación del tráfico urbano. En la figura 1b se muestra un plano que al intersectar la superficie muestra el máximo valor de $$\Phi$$ para un valor de $$T_1$$ dado.
+![Figura 1a](Figure 2026-06-14 184344.png)
+*Figura 1a: Representación de la función $$\Phi$$ para los datos experimentales tomados cuando se emplea la función $$\lfloor \text{ }\rfloor$$ (piso).*
 
-| (a) Representación de la función $$\Phi$$ para los datos experimentales tomados cuando se emplea la función $$\lfloor \text{ }\rfloor$$ (piso). | (b) Representación de la función $$\Phi$$ para los datos experimentales tomados cuando no se emplea la función $$\lfloor \text{ } \rfloor$$ (piso). |
-|:---:|:---:|
-| ![Figura 1a](Figure%2026-06-14%184344.png) | ![Figura 1b](Figure%2026-06-14%184345.png) |
-| *Figura 1a* | *Figura 1b* |
+![Figura 1b](Figure 2026-06-14 184345.png)
+*Figura 1b: Representación de la función $$\Phi$$ para los datos experimentales tomados cuando no se emplea la función $$\lfloor \text{ } \rfloor$$ (piso).*
 
-**Figure 2:** Gráfica de la derivada de $$\Phi$$ respecto de $$T_{sat}$$. Note que la función derivada se aproxima asintóticamente a cero, lo que indica que la función que describe a $$\Phi$$ no tiene punto crítico y por tanto no tiene un máximo definido.
+![Figura 2](Figure 2026-06-15 203629.png)
+*Figura 2: Gráfica de la derivada de $$\Phi$$ respecto de $$T_{sat}$$.*
 
-![Figura 2](Figure%2026-06-15%203629.png)
+![Figura 3](nodo-cuartel-libertador.jpeg)
+*Figura 3: Esquemático del problema planteado en la intersección FEC-Cuartel Libertador.*
 
-**Figura 2:** Gráfica de la derivada de $$\Phi$$ respecto de $$T_{sat}$$.*
+![Figura 4](colisión-entre-vías.png)
+*Figura 4: Mapa mostrando el choque vehicular con el cambio del patrón de funcionamiento del semáforo.*
 
 ---
