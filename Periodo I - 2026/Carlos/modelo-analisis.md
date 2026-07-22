@@ -119,7 +119,7 @@ Si se omite la consideración anterior y se hace la suposición de que efectivam
 
 $$ \Phi_A = \frac{\Phi_1+\Phi_2+\Phi_3+\Phi_4}{4} $$
 
-Mientras que B es el máximo de entre las secuencias 1,3 y 2,4 
+Mientras que B es el máximo de entre las secuencias promedio 1,3 y 2,4 
 
 $$ \Phi_B = max(\frac{\Phi_1+\Phi_3}{2},\frac{\Phi_2+\Phi_4}{2}) $$
 
