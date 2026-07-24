@@ -125,6 +125,8 @@ $$ \Phi_B = max(\frac{\Phi_1+\Phi_3}{2},\frac{\Phi_2+\Phi_4}{2}) $$
 
 Pero como $$T_1$$ y $$T_{sat}$$ pueden tener cualquier valor para cada canal 1,2,3,4 entonces realmente $$\Phi_A$$ y $$\Phi_B$$ pueden tener cualquier valor finito positivo mayor que cero, y en consecuencia en base a este modelo matemático no hay forma de determinar matemáticamente si A es mejor que B o viceversa. Sin embargo, si es posible obtener una medida estadística que permita establecer si A es mejor que B o a la inversa, pero ello requiere un gran número de mediciones para establecer valores de tendencia central y de dispersión. Los resultados de realizar las mencionadas medidas estadísticas solo tienen validez localmente, y están sujetas a variaciones si se consideran intervalos de medición amplios en el tiempo (por ejemplo mediciones hechas en diciembre o en agosto, o considerando un año de mediciones o solo unos meses).
 
+Si se considera un mismo valor promedio para los flujos 1,2,3, y 4, entonces es claro que el escenario B es exactamente igual al A, si esta suposición no se considera y se asume que los flujos 1,2,3, y 4 pueden variar, entonces el escenario óptimo dependerá de las mediciones,pero su validez puede cambiar con el tiempo pues la afluencia de vehículos no ocurre a una razón constante para todos los intervalos de tiempo (por ejemplo en solo 12 horas se ve una variación pues no es la misma circulación de vehículos en el día que en la noche, por ejemplo).
+
 ---
 
 ## Concluciones
